@@ -14,45 +14,45 @@ public final class User {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface LoginRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:LoginRequest)
+  public interface ChatMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ChatMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string username = 1;</code>
+     * <code>string sender = 1;</code>
      */
-    java.lang.String getUsername();
+    java.lang.String getSender();
     /**
-     * <code>string username = 1;</code>
+     * <code>string sender = 1;</code>
      */
     com.google.protobuf.ByteString
-        getUsernameBytes();
+        getSenderBytes();
 
     /**
-     * <code>string password = 2;</code>
+     * <code>string content = 2;</code>
      */
-    java.lang.String getPassword();
+    java.lang.String getContent();
     /**
-     * <code>string password = 2;</code>
+     * <code>string content = 2;</code>
      */
     com.google.protobuf.ByteString
-        getPasswordBytes();
+        getContentBytes();
   }
   /**
-   * Protobuf type {@code LoginRequest}
+   * Protobuf type {@code ChatMessage}
    */
-  public  static final class LoginRequest extends
+  public  static final class ChatMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:LoginRequest)
-      LoginRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:ChatMessage)
+      ChatMessageOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use LoginRequest.newBuilder() to construct.
-    private LoginRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ChatMessage.newBuilder() to construct.
+    private ChatMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private LoginRequest() {
-      username_ = "";
-      password_ = "";
+    private ChatMessage() {
+      sender_ = "";
+      content_ = "";
     }
 
     @java.lang.Override
@@ -60,7 +60,7 @@ public final class User {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private LoginRequest(
+    private ChatMessage(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -82,13 +82,13 @@ public final class User {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              username_ = s;
+              sender_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              password_ = s;
+              content_ = s;
               break;
             }
             default: {
@@ -112,79 +112,79 @@ public final class User {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.yrrhelp.grpc.User.internal_static_LoginRequest_descriptor;
+      return com.yrrhelp.grpc.User.internal_static_ChatMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.yrrhelp.grpc.User.internal_static_LoginRequest_fieldAccessorTable
+      return com.yrrhelp.grpc.User.internal_static_ChatMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.yrrhelp.grpc.User.LoginRequest.class, com.yrrhelp.grpc.User.LoginRequest.Builder.class);
+              com.yrrhelp.grpc.User.ChatMessage.class, com.yrrhelp.grpc.User.ChatMessage.Builder.class);
     }
 
-    public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object username_;
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object sender_;
     /**
-     * <code>string username = 1;</code>
+     * <code>string sender = 1;</code>
      */
-    public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        username_ = s;
+        sender_ = s;
         return s;
       }
     }
     /**
-     * <code>string username = 1;</code>
+     * <code>string sender = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      java.lang.Object ref = username_;
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        username_ = b;
+        sender_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object password_;
+    public static final int CONTENT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object content_;
     /**
-     * <code>string password = 2;</code>
+     * <code>string content = 2;</code>
      */
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        password_ = s;
+        content_ = s;
         return s;
       }
     }
     /**
-     * <code>string password = 2;</code>
+     * <code>string content = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      java.lang.Object ref = password_;
+        getContentBytes() {
+      java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        password_ = b;
+        content_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -205,11 +205,11 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
+      if (!getSenderBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
       }
-      if (!getPasswordBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+      if (!getContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
       }
       unknownFields.writeTo(output);
     }
@@ -220,11 +220,11 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
+      if (!getSenderBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
       }
-      if (!getPasswordBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+      if (!getContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -236,16 +236,16 @@ public final class User {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.yrrhelp.grpc.User.LoginRequest)) {
+      if (!(obj instanceof com.yrrhelp.grpc.User.ChatMessage)) {
         return super.equals(obj);
       }
-      com.yrrhelp.grpc.User.LoginRequest other = (com.yrrhelp.grpc.User.LoginRequest) obj;
+      com.yrrhelp.grpc.User.ChatMessage other = (com.yrrhelp.grpc.User.ChatMessage) obj;
 
       boolean result = true;
-      result = result && getUsername()
-          .equals(other.getUsername());
-      result = result && getPassword()
-          .equals(other.getPassword());
+      result = result && getSender()
+          .equals(other.getSender());
+      result = result && getContent()
+          .equals(other.getContent());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -257,78 +257,78 @@ public final class User {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getUsername().hashCode();
-      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
-      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getContent().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(byte[] data)
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(java.io.InputStream input)
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.yrrhelp.grpc.User.ChatMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseDelimitedFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.yrrhelp.grpc.User.LoginRequest parseFrom(
+    public static com.yrrhelp.grpc.User.ChatMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -341,7 +341,7 @@ public final class User {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.yrrhelp.grpc.User.LoginRequest prototype) {
+    public static Builder newBuilder(com.yrrhelp.grpc.User.ChatMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -357,26 +357,26 @@ public final class User {
       return builder;
     }
     /**
-     * Protobuf type {@code LoginRequest}
+     * Protobuf type {@code ChatMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:LoginRequest)
-        com.yrrhelp.grpc.User.LoginRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ChatMessage)
+        com.yrrhelp.grpc.User.ChatMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.yrrhelp.grpc.User.internal_static_LoginRequest_descriptor;
+        return com.yrrhelp.grpc.User.internal_static_ChatMessage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.yrrhelp.grpc.User.internal_static_LoginRequest_fieldAccessorTable
+        return com.yrrhelp.grpc.User.internal_static_ChatMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.yrrhelp.grpc.User.LoginRequest.class, com.yrrhelp.grpc.User.LoginRequest.Builder.class);
+                com.yrrhelp.grpc.User.ChatMessage.class, com.yrrhelp.grpc.User.ChatMessage.Builder.class);
       }
 
-      // Construct using com.yrrhelp.grpc.User.LoginRequest.newBuilder()
+      // Construct using com.yrrhelp.grpc.User.ChatMessage.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -394,9 +394,9 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        username_ = "";
+        sender_ = "";
 
-        password_ = "";
+        content_ = "";
 
         return this;
       }
@@ -404,17 +404,17 @@ public final class User {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.yrrhelp.grpc.User.internal_static_LoginRequest_descriptor;
+        return com.yrrhelp.grpc.User.internal_static_ChatMessage_descriptor;
       }
 
       @java.lang.Override
-      public com.yrrhelp.grpc.User.LoginRequest getDefaultInstanceForType() {
-        return com.yrrhelp.grpc.User.LoginRequest.getDefaultInstance();
+      public com.yrrhelp.grpc.User.ChatMessage getDefaultInstanceForType() {
+        return com.yrrhelp.grpc.User.ChatMessage.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.yrrhelp.grpc.User.LoginRequest build() {
-        com.yrrhelp.grpc.User.LoginRequest result = buildPartial();
+      public com.yrrhelp.grpc.User.ChatMessage build() {
+        com.yrrhelp.grpc.User.ChatMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -422,10 +422,10 @@ public final class User {
       }
 
       @java.lang.Override
-      public com.yrrhelp.grpc.User.LoginRequest buildPartial() {
-        com.yrrhelp.grpc.User.LoginRequest result = new com.yrrhelp.grpc.User.LoginRequest(this);
-        result.username_ = username_;
-        result.password_ = password_;
+      public com.yrrhelp.grpc.User.ChatMessage buildPartial() {
+        com.yrrhelp.grpc.User.ChatMessage result = new com.yrrhelp.grpc.User.ChatMessage(this);
+        result.sender_ = sender_;
+        result.content_ = content_;
         onBuilt();
         return result;
       }
@@ -464,22 +464,22 @@ public final class User {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.yrrhelp.grpc.User.LoginRequest) {
-          return mergeFrom((com.yrrhelp.grpc.User.LoginRequest)other);
+        if (other instanceof com.yrrhelp.grpc.User.ChatMessage) {
+          return mergeFrom((com.yrrhelp.grpc.User.ChatMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.yrrhelp.grpc.User.LoginRequest other) {
-        if (other == com.yrrhelp.grpc.User.LoginRequest.getDefaultInstance()) return this;
-        if (!other.getUsername().isEmpty()) {
-          username_ = other.username_;
+      public Builder mergeFrom(com.yrrhelp.grpc.User.ChatMessage other) {
+        if (other == com.yrrhelp.grpc.User.ChatMessage.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
           onChanged();
         }
-        if (!other.getPassword().isEmpty()) {
-          password_ = other.password_;
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -497,11 +497,11 @@ public final class User {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.yrrhelp.grpc.User.LoginRequest parsedMessage = null;
+        com.yrrhelp.grpc.User.ChatMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.yrrhelp.grpc.User.LoginRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.yrrhelp.grpc.User.ChatMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -511,140 +511,140 @@ public final class User {
         return this;
       }
 
-      private java.lang.Object username_ = "";
+      private java.lang.Object sender_ = "";
       /**
-       * <code>string username = 1;</code>
+       * <code>string sender = 1;</code>
        */
-      public java.lang.String getUsername() {
-        java.lang.Object ref = username_;
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          username_ = s;
+          sender_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string username = 1;</code>
+       * <code>string sender = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getUsernameBytes() {
-        java.lang.Object ref = username_;
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          username_ = b;
+          sender_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string username = 1;</code>
+       * <code>string sender = 1;</code>
        */
-      public Builder setUsername(
+      public Builder setSender(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        username_ = value;
+        sender_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string username = 1;</code>
+       * <code>string sender = 1;</code>
        */
-      public Builder clearUsername() {
+      public Builder clearSender() {
         
-        username_ = getDefaultInstance().getUsername();
+        sender_ = getDefaultInstance().getSender();
         onChanged();
         return this;
       }
       /**
-       * <code>string username = 1;</code>
+       * <code>string sender = 1;</code>
        */
-      public Builder setUsernameBytes(
+      public Builder setSenderBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        username_ = value;
+        sender_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object password_ = "";
+      private java.lang.Object content_ = "";
       /**
-       * <code>string password = 2;</code>
+       * <code>string content = 2;</code>
        */
-      public java.lang.String getPassword() {
-        java.lang.Object ref = password_;
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          password_ = s;
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string password = 2;</code>
+       * <code>string content = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getPasswordBytes() {
-        java.lang.Object ref = password_;
+          getContentBytes() {
+        java.lang.Object ref = content_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          password_ = b;
+          content_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string password = 2;</code>
+       * <code>string content = 2;</code>
        */
-      public Builder setPassword(
+      public Builder setContent(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        password_ = value;
+        content_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string password = 2;</code>
+       * <code>string content = 2;</code>
        */
-      public Builder clearPassword() {
+      public Builder clearContent() {
         
-        password_ = getDefaultInstance().getPassword();
+        content_ = getDefaultInstance().getContent();
         onChanged();
         return this;
       }
       /**
-       * <code>string password = 2;</code>
+       * <code>string content = 2;</code>
        */
-      public Builder setPasswordBytes(
+      public Builder setContentBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        password_ = value;
+        content_ = value;
         onChanged();
         return this;
       }
@@ -661,80 +661,80 @@ public final class User {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:LoginRequest)
+      // @@protoc_insertion_point(builder_scope:ChatMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:LoginRequest)
-    private static final com.yrrhelp.grpc.User.LoginRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ChatMessage)
+    private static final com.yrrhelp.grpc.User.ChatMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.yrrhelp.grpc.User.LoginRequest();
+      DEFAULT_INSTANCE = new com.yrrhelp.grpc.User.ChatMessage();
     }
 
-    public static com.yrrhelp.grpc.User.LoginRequest getDefaultInstance() {
+    public static com.yrrhelp.grpc.User.ChatMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<LoginRequest>
-        PARSER = new com.google.protobuf.AbstractParser<LoginRequest>() {
+    private static final com.google.protobuf.Parser<ChatMessage>
+        PARSER = new com.google.protobuf.AbstractParser<ChatMessage>() {
       @java.lang.Override
-      public LoginRequest parsePartialFrom(
+      public ChatMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LoginRequest(input, extensionRegistry);
+        return new ChatMessage(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<LoginRequest> parser() {
+    public static com.google.protobuf.Parser<ChatMessage> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<LoginRequest> getParserForType() {
+    public com.google.protobuf.Parser<ChatMessage> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.yrrhelp.grpc.User.LoginRequest getDefaultInstanceForType() {
+    public com.yrrhelp.grpc.User.ChatMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface APIResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:APIResponse)
+  public interface ChatResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ChatResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>bool success = 1;</code>
      */
-    java.lang.String getResponsemessage();
-    /**
-     * <code>string responsemessage = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getResponsemessageBytes();
+    boolean getSuccess();
 
     /**
-     * <code>int32 responseCode = 2;</code>
+     * <code>string message = 2;</code>
      */
-    int getResponseCode();
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
   }
   /**
-   * Protobuf type {@code APIResponse}
+   * Protobuf type {@code ChatResponse}
    */
-  public  static final class APIResponse extends
+  public  static final class ChatResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:APIResponse)
-      APIResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:ChatResponse)
+      ChatResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use APIResponse.newBuilder() to construct.
-    private APIResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ChatResponse.newBuilder() to construct.
+    private ChatResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private APIResponse() {
-      responsemessage_ = "";
-      responseCode_ = 0;
+    private ChatResponse() {
+      success_ = false;
+      message_ = "";
     }
 
     @java.lang.Override
@@ -742,7 +742,7 @@ public final class User {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private APIResponse(
+    private ChatResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -761,15 +761,15 @@ public final class User {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 8: {
 
-              responsemessage_ = s;
+              success_ = input.readBool();
               break;
             }
-            case 16: {
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              responseCode_ = input.readInt32();
+              message_ = s;
               break;
             }
             default: {
@@ -793,60 +793,60 @@ public final class User {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.yrrhelp.grpc.User.internal_static_APIResponse_descriptor;
+      return com.yrrhelp.grpc.User.internal_static_ChatResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.yrrhelp.grpc.User.internal_static_APIResponse_fieldAccessorTable
+      return com.yrrhelp.grpc.User.internal_static_ChatResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.yrrhelp.grpc.User.APIResponse.class, com.yrrhelp.grpc.User.APIResponse.Builder.class);
+              com.yrrhelp.grpc.User.ChatResponse.class, com.yrrhelp.grpc.User.ChatResponse.Builder.class);
     }
 
-    public static final int RESPONSEMESSAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object responsemessage_;
+    public static final int SUCCESS_FIELD_NUMBER = 1;
+    private boolean success_;
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>bool success = 1;</code>
      */
-    public java.lang.String getResponsemessage() {
-      java.lang.Object ref = responsemessage_;
+    public boolean getSuccess() {
+      return success_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2;</code>
+     */
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        responsemessage_ = s;
+        message_ = s;
         return s;
       }
     }
     /**
-     * <code>string responsemessage = 1;</code>
+     * <code>string message = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getResponsemessageBytes() {
-      java.lang.Object ref = responsemessage_;
+        getMessageBytes() {
+      java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        responsemessage_ = b;
+        message_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int RESPONSECODE_FIELD_NUMBER = 2;
-    private int responseCode_;
-    /**
-     * <code>int32 responseCode = 2;</code>
-     */
-    public int getResponseCode() {
-      return responseCode_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -861,11 +861,11 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResponsemessageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, responsemessage_);
+      if (success_ != false) {
+        output.writeBool(1, success_);
       }
-      if (responseCode_ != 0) {
-        output.writeInt32(2, responseCode_);
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
       }
       unknownFields.writeTo(output);
     }
@@ -876,12 +876,12 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResponsemessageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, responsemessage_);
-      }
-      if (responseCode_ != 0) {
+      if (success_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, responseCode_);
+          .computeBoolSize(1, success_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -893,16 +893,16 @@ public final class User {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.yrrhelp.grpc.User.APIResponse)) {
+      if (!(obj instanceof com.yrrhelp.grpc.User.ChatResponse)) {
         return super.equals(obj);
       }
-      com.yrrhelp.grpc.User.APIResponse other = (com.yrrhelp.grpc.User.APIResponse) obj;
+      com.yrrhelp.grpc.User.ChatResponse other = (com.yrrhelp.grpc.User.ChatResponse) obj;
 
       boolean result = true;
-      result = result && getResponsemessage()
-          .equals(other.getResponsemessage());
-      result = result && (getResponseCode()
-          == other.getResponseCode());
+      result = result && (getSuccess()
+          == other.getSuccess());
+      result = result && getMessage()
+          .equals(other.getMessage());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -914,78 +914,79 @@ public final class User {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESPONSEMESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getResponsemessage().hashCode();
-      hash = (37 * hash) + RESPONSECODE_FIELD_NUMBER;
-      hash = (53 * hash) + getResponseCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(byte[] data)
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(java.io.InputStream input)
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.yrrhelp.grpc.User.ChatResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseDelimitedFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.yrrhelp.grpc.User.APIResponse parseFrom(
+    public static com.yrrhelp.grpc.User.ChatResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -998,7 +999,7 @@ public final class User {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.yrrhelp.grpc.User.APIResponse prototype) {
+    public static Builder newBuilder(com.yrrhelp.grpc.User.ChatResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1014,26 +1015,26 @@ public final class User {
       return builder;
     }
     /**
-     * Protobuf type {@code APIResponse}
+     * Protobuf type {@code ChatResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:APIResponse)
-        com.yrrhelp.grpc.User.APIResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ChatResponse)
+        com.yrrhelp.grpc.User.ChatResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.yrrhelp.grpc.User.internal_static_APIResponse_descriptor;
+        return com.yrrhelp.grpc.User.internal_static_ChatResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.yrrhelp.grpc.User.internal_static_APIResponse_fieldAccessorTable
+        return com.yrrhelp.grpc.User.internal_static_ChatResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.yrrhelp.grpc.User.APIResponse.class, com.yrrhelp.grpc.User.APIResponse.Builder.class);
+                com.yrrhelp.grpc.User.ChatResponse.class, com.yrrhelp.grpc.User.ChatResponse.Builder.class);
       }
 
-      // Construct using com.yrrhelp.grpc.User.APIResponse.newBuilder()
+      // Construct using com.yrrhelp.grpc.User.ChatResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1051,9 +1052,9 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        responsemessage_ = "";
+        success_ = false;
 
-        responseCode_ = 0;
+        message_ = "";
 
         return this;
       }
@@ -1061,17 +1062,17 @@ public final class User {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.yrrhelp.grpc.User.internal_static_APIResponse_descriptor;
+        return com.yrrhelp.grpc.User.internal_static_ChatResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.yrrhelp.grpc.User.APIResponse getDefaultInstanceForType() {
-        return com.yrrhelp.grpc.User.APIResponse.getDefaultInstance();
+      public com.yrrhelp.grpc.User.ChatResponse getDefaultInstanceForType() {
+        return com.yrrhelp.grpc.User.ChatResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.yrrhelp.grpc.User.APIResponse build() {
-        com.yrrhelp.grpc.User.APIResponse result = buildPartial();
+      public com.yrrhelp.grpc.User.ChatResponse build() {
+        com.yrrhelp.grpc.User.ChatResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1079,10 +1080,10 @@ public final class User {
       }
 
       @java.lang.Override
-      public com.yrrhelp.grpc.User.APIResponse buildPartial() {
-        com.yrrhelp.grpc.User.APIResponse result = new com.yrrhelp.grpc.User.APIResponse(this);
-        result.responsemessage_ = responsemessage_;
-        result.responseCode_ = responseCode_;
+      public com.yrrhelp.grpc.User.ChatResponse buildPartial() {
+        com.yrrhelp.grpc.User.ChatResponse result = new com.yrrhelp.grpc.User.ChatResponse(this);
+        result.success_ = success_;
+        result.message_ = message_;
         onBuilt();
         return result;
       }
@@ -1121,22 +1122,22 @@ public final class User {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.yrrhelp.grpc.User.APIResponse) {
-          return mergeFrom((com.yrrhelp.grpc.User.APIResponse)other);
+        if (other instanceof com.yrrhelp.grpc.User.ChatResponse) {
+          return mergeFrom((com.yrrhelp.grpc.User.ChatResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.yrrhelp.grpc.User.APIResponse other) {
-        if (other == com.yrrhelp.grpc.User.APIResponse.getDefaultInstance()) return this;
-        if (!other.getResponsemessage().isEmpty()) {
-          responsemessage_ = other.responsemessage_;
-          onChanged();
+      public Builder mergeFrom(com.yrrhelp.grpc.User.ChatResponse other) {
+        if (other == com.yrrhelp.grpc.User.ChatResponse.getDefaultInstance()) return this;
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
         }
-        if (other.getResponseCode() != 0) {
-          setResponseCode(other.getResponseCode());
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1153,11 +1154,11 @@ public final class User {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.yrrhelp.grpc.User.APIResponse parsedMessage = null;
+        com.yrrhelp.grpc.User.ChatResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.yrrhelp.grpc.User.APIResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.yrrhelp.grpc.User.ChatResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1167,97 +1168,97 @@ public final class User {
         return this;
       }
 
-      private java.lang.Object responsemessage_ = "";
+      private boolean success_ ;
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>bool success = 1;</code>
        */
-      public java.lang.String getResponsemessage() {
-        java.lang.Object ref = responsemessage_;
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <code>bool success = 1;</code>
+       */
+      public Builder setSuccess(boolean value) {
+        
+        success_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool success = 1;</code>
+       */
+      public Builder clearSuccess() {
+        
+        success_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          responsemessage_ = s;
+          message_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string message = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getResponsemessageBytes() {
-        java.lang.Object ref = responsemessage_;
+          getMessageBytes() {
+        java.lang.Object ref = message_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          responsemessage_ = b;
+          message_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string message = 2;</code>
        */
-      public Builder setResponsemessage(
+      public Builder setMessage(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        responsemessage_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string message = 2;</code>
        */
-      public Builder clearResponsemessage() {
+      public Builder clearMessage() {
         
-        responsemessage_ = getDefaultInstance().getResponsemessage();
+        message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
       }
       /**
-       * <code>string responsemessage = 1;</code>
+       * <code>string message = 2;</code>
        */
-      public Builder setResponsemessageBytes(
+      public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        responsemessage_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int responseCode_ ;
-      /**
-       * <code>int32 responseCode = 2;</code>
-       */
-      public int getResponseCode() {
-        return responseCode_;
-      }
-      /**
-       * <code>int32 responseCode = 2;</code>
-       */
-      public Builder setResponseCode(int value) {
-        
-        responseCode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 responseCode = 2;</code>
-       */
-      public Builder clearResponseCode() {
-        
-        responseCode_ = 0;
+        message_ = value;
         onChanged();
         return this;
       }
@@ -1274,473 +1275,56 @@ public final class User {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:APIResponse)
+      // @@protoc_insertion_point(builder_scope:ChatResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:APIResponse)
-    private static final com.yrrhelp.grpc.User.APIResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ChatResponse)
+    private static final com.yrrhelp.grpc.User.ChatResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.yrrhelp.grpc.User.APIResponse();
+      DEFAULT_INSTANCE = new com.yrrhelp.grpc.User.ChatResponse();
     }
 
-    public static com.yrrhelp.grpc.User.APIResponse getDefaultInstance() {
+    public static com.yrrhelp.grpc.User.ChatResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<APIResponse>
-        PARSER = new com.google.protobuf.AbstractParser<APIResponse>() {
+    private static final com.google.protobuf.Parser<ChatResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ChatResponse>() {
       @java.lang.Override
-      public APIResponse parsePartialFrom(
+      public ChatResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new APIResponse(input, extensionRegistry);
+        return new ChatResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<APIResponse> parser() {
+    public static com.google.protobuf.Parser<ChatResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<APIResponse> getParserForType() {
+    public com.google.protobuf.Parser<ChatResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.yrrhelp.grpc.User.APIResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EmptyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Empty)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code Empty}
-   */
-  public  static final class Empty extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Empty)
-      EmptyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Empty.newBuilder() to construct.
-    private Empty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Empty() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Empty(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.yrrhelp.grpc.User.internal_static_Empty_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.yrrhelp.grpc.User.internal_static_Empty_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.yrrhelp.grpc.User.Empty.class, com.yrrhelp.grpc.User.Empty.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.yrrhelp.grpc.User.Empty)) {
-        return super.equals(obj);
-      }
-      com.yrrhelp.grpc.User.Empty other = (com.yrrhelp.grpc.User.Empty) obj;
-
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.yrrhelp.grpc.User.Empty parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.yrrhelp.grpc.User.Empty prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Empty}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Empty)
-        com.yrrhelp.grpc.User.EmptyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.yrrhelp.grpc.User.internal_static_Empty_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.yrrhelp.grpc.User.internal_static_Empty_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.yrrhelp.grpc.User.Empty.class, com.yrrhelp.grpc.User.Empty.Builder.class);
-      }
-
-      // Construct using com.yrrhelp.grpc.User.Empty.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.yrrhelp.grpc.User.internal_static_Empty_descriptor;
-      }
-
-      @java.lang.Override
-      public com.yrrhelp.grpc.User.Empty getDefaultInstanceForType() {
-        return com.yrrhelp.grpc.User.Empty.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.yrrhelp.grpc.User.Empty build() {
-        com.yrrhelp.grpc.User.Empty result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.yrrhelp.grpc.User.Empty buildPartial() {
-        com.yrrhelp.grpc.User.Empty result = new com.yrrhelp.grpc.User.Empty(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.yrrhelp.grpc.User.Empty) {
-          return mergeFrom((com.yrrhelp.grpc.User.Empty)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.yrrhelp.grpc.User.Empty other) {
-        if (other == com.yrrhelp.grpc.User.Empty.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.yrrhelp.grpc.User.Empty parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.yrrhelp.grpc.User.Empty) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Empty)
-    }
-
-    // @@protoc_insertion_point(class_scope:Empty)
-    private static final com.yrrhelp.grpc.User.Empty DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.yrrhelp.grpc.User.Empty();
-    }
-
-    public static com.yrrhelp.grpc.User.Empty getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Empty>
-        PARSER = new com.google.protobuf.AbstractParser<Empty>() {
-      @java.lang.Override
-      public Empty parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Empty(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Empty> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Empty> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.yrrhelp.grpc.User.Empty getDefaultInstanceForType() {
+    public com.yrrhelp.grpc.User.ChatResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_LoginRequest_descriptor;
+    internal_static_ChatMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_LoginRequest_fieldAccessorTable;
+      internal_static_ChatMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_APIResponse_descriptor;
+    internal_static_ChatResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_APIResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Empty_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Empty_fieldAccessorTable;
+      internal_static_ChatResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1750,13 +1334,14 @@ public final class User {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nuser.proto\"2\n\014LoginRequest\022\020\n\010username" +
-      "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"<\n\013APIResponse\022" +
-      "\027\n\017responsemessage\030\001 \001(\t\022\024\n\014responseCode" +
-      "\030\002 \001(\005\"\007\n\005Empty2L\n\004user\022$\n\005login\022\r.Login" +
-      "Request\032\014.APIResponse\022\036\n\006logout\022\006.Empty\032" +
-      "\014.APIResponseB\022\n\020com.yrrhelp.grpcb\006proto" +
-      "3"
+      "\n\nuser.proto\".\n\013ChatMessage\022\016\n\006sender\030\001 " +
+      "\001(\t\022\017\n\007content\030\002 \001(\t\"0\n\014ChatResponse\022\017\n\007" +
+      "success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t2\225\001\n\013ChatS" +
+      "ervice\022*\n\013SendMessage\022\014.ChatMessage\032\r.Ch" +
+      "atResponse\022*\n\013LikeMessage\022\014.ChatMessage\032" +
+      "\r.ChatResponse\022.\n\016ReceiveMessage\022\014.ChatM" +
+      "essage\032\014.ChatMessage0\001B\022\n\020com.yrrhelp.gr" +
+      "pcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1770,24 +1355,18 @@ public final class User {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_LoginRequest_descriptor =
+    internal_static_ChatMessage_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_LoginRequest_fieldAccessorTable = new
+    internal_static_ChatMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_LoginRequest_descriptor,
-        new java.lang.String[] { "Username", "Password", });
-    internal_static_APIResponse_descriptor =
+        internal_static_ChatMessage_descriptor,
+        new java.lang.String[] { "Sender", "Content", });
+    internal_static_ChatResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_APIResponse_fieldAccessorTable = new
+    internal_static_ChatResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_APIResponse_descriptor,
-        new java.lang.String[] { "Responsemessage", "ResponseCode", });
-    internal_static_Empty_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_Empty_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Empty_descriptor,
-        new java.lang.String[] { });
+        internal_static_ChatResponse_descriptor,
+        new java.lang.String[] { "Success", "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
