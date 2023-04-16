@@ -5,18 +5,17 @@ import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ChatServer {
+public class Chat01Server {
     private final int port;
     private final Server server;
     private final Map<String, StreamObserver<User.ChatMessage>> clients = new ConcurrentHashMap<>();
     private final Map<String, AtomicInteger> messageLikes = new ConcurrentHashMap<>();
 
-    public ChatServer(int port) {
+    public Chat01Server(int port) {
         this.port = port;
         this.server = ServerBuilder.forPort(port)
                 .addService(new ChatServiceImpl())
@@ -61,7 +60,7 @@ public class ChatServer {
         public void likeMessage(User.ChatMessage request, StreamObserver<User.ChatResponse> responseObserver) {
             String sender = request.getSender();
             String content = request.getContent();
-            String key = sender + content;
+            String key = content;
 
             // Check if the message exists in the messageLikes map
             if (!messageLikes.containsKey(key)) {
@@ -80,7 +79,7 @@ public class ChatServer {
             likeCount.incrementAndGet();
 
             // Check if the like count is greater than or equal to 2
-            if (likeCount.get() >= 2) {
+            if (likeCount.get() <= 2) {
                 // Broadcast the liked message to all connected clients
                 for (StreamObserver<User.ChatMessage> client : clients.values()) {
                     client.onNext(request);
@@ -129,7 +128,7 @@ public class ChatServer {
             port = Integer.parseInt(args[0]);
         }
 
-        ChatServer server = new ChatServer(port);
+        Chat01Server server = new Chat01Server(port);
         server.start();
 
         // Wait for server to terminate
