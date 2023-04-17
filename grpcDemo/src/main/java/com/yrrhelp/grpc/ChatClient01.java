@@ -182,6 +182,7 @@ public class ChatClient01 {
                     System.out.print("Enter message content: ");
                     String content = scanner.nextLine();
                     client.sendMessage(content);
+
                     break;
                 case 2:
                     System.out.print("Enter message content to like: ");
