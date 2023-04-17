@@ -7,7 +7,7 @@ import io.grpc.stub.StreamObserver;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class ChatClient {
+public class ChatClient03 {
     private final String name;
     private final String serverAddress;
     private final int serverPort;
@@ -17,7 +17,7 @@ public class ChatClient {
     private ChatServiceGrpc.ChatServiceBlockingStub blockingStub;
     private boolean isRunning;
 
-    public ChatClient(String name, String serverAddress, int serverPort) {
+    public ChatClient03(String name, String serverAddress, int serverPort) {
         this.name = name;
         this.serverAddress = serverAddress;
         this.serverPort = serverPort;
@@ -165,7 +165,7 @@ public class ChatClient {
         System.out.print("Enter server port: ");
         int serverPort = scanner.nextInt();
 
-        ChatClient client = new ChatClient(name, serverAddress, serverPort);
+        ChatClient03 client = new ChatClient03(name, serverAddress, serverPort);
         client.connect();
 
         boolean isRunning = true;

@@ -14,7 +14,7 @@ public class ChatServer {
     private final int port;
     private final Server server;
     private final Map<String, StreamObserver<User.ChatMessage>> clients = new ConcurrentHashMap<>();
-    private final Map<String, AtomicInteger> messageLikes = new ConcurrentHashMap<>();
+    public static final Map<String, AtomicInteger> messageLikes = new ConcurrentHashMap<>();
 
     public ChatServer(int port) {
         this.port = port;
@@ -34,20 +34,36 @@ public class ChatServer {
         }
     }
 
+
     private class ChatServiceImpl extends ChatServiceGrpc.ChatServiceImplBase {
         @Override
         public void sendMessage(User.ChatMessage request, StreamObserver<User.ChatResponse> responseObserver) {
             String sender = request.getSender();
-            String content = request.getContent();
 
             // Broadcast the message to all connected clients
-            for (StreamObserver<User.ChatMessage> client : clients.values()) {
-                client.onNext(request);
+
+            if (!messageLikes.containsKey(sender)) {
+                for (StreamObserver<User.ChatMessage> client : clients.values()) {
+                    client.onNext(request);
+                }
+            } else {
+                if (messageLikes.get(sender).intValue() >= 2) {
+                    for (StreamObserver<User.ChatMessage> client : clients.values()) {
+                        client.onNext(request);
+                    }
+                } else {
+                    User.ChatResponse response = User.ChatResponse.newBuilder()
+                            .setSuccess(false)
+                            .setMessage("Can't send message")
+                            .build();
+                    responseObserver.onNext(response);
+                    responseObserver.onCompleted();
+                    return;
+                }
             }
 
-            //
             // Add the message to the messageLikes map with initial like count of 0
-            messageLikes.put(sender + content, new AtomicInteger(0));
+            messageLikes.put(sender, new AtomicInteger(0));
 
             User.ChatResponse response = User.ChatResponse.newBuilder()
                     .setSuccess(true)
@@ -61,10 +77,9 @@ public class ChatServer {
         public void likeMessage(User.ChatMessage request, StreamObserver<User.ChatResponse> responseObserver) {
             String sender = request.getSender();
             String content = request.getContent();
-            String key = sender + content;
 
             // Check if the message exists in the messageLikes map
-            if (!messageLikes.containsKey(key)) {
+            if (!messageLikes.containsKey(content)) {
                 User.ChatResponse response = User.ChatResponse.newBuilder()
                         .setSuccess(false)
                         .setMessage("Message not found")
@@ -74,20 +89,15 @@ public class ChatServer {
                 return;
             }
 
-            AtomicInteger likeCount = messageLikes.get(key);
+            AtomicInteger likeCount = messageLikes.get(content);
 
             // Increase the like count by 1
             likeCount.incrementAndGet();
 
             // Check if the like count is greater than or equal to 2
             if (likeCount.get() >= 2) {
-                // Broadcast the liked message to all connected clients
-                for (StreamObserver<User.ChatMessage> client : clients.values()) {
-                    client.onNext(request);
-                }
-
                 // Remove the message from the messageLikes map
-                messageLikes.remove(key);
+                messageLikes.remove(content);
             }
 
             User.ChatResponse response = User.ChatResponse.newBuilder()
