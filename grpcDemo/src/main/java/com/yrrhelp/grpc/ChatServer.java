@@ -14,7 +14,7 @@ public class ChatServer {
     private final int port;
     private final Server server;
     private final Map<String, StreamObserver<User.ChatMessage>> clients = new ConcurrentHashMap<>();
-    public static final Map<String, AtomicInteger> messageLikes = new ConcurrentHashMap<>();
+    private final Map<String, AtomicInteger> messageLikes = new ConcurrentHashMap<>();
 
     public ChatServer(int port) {
         this.port = port;
